@@ -18,7 +18,7 @@ class StockBatchPicking(models.Model):
         unique=True,
         states={'draft': [('readonly', False)]},
         default=lambda self: self.env['ir.sequence'].next_by_code(
-            'stock.picking.batch'
+            'picking.batch'
         ),
     )
 
